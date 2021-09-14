@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-Kronik/Pods-Kronik-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework
+${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/PPRiskMagnes/PPRiskMagnes.framework/PPRiskMagnes
+${PODS_XCFRAMEWORKS_BUILD_DIR}/CardinalMobile/CardinalMobile.framework/CardinalMobile

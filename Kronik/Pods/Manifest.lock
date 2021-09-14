@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Braintree (5.4.0):
+    - Braintree/Card (= 5.4.0)
+    - Braintree/Core (= 5.4.0)
+    - Braintree/PayPal (= 5.4.0)
+  - Braintree/ApplePay (5.4.0):
+    - Braintree/Core
+  - Braintree/Card (5.4.0):
+    - Braintree/Core
+  - Braintree/Core (5.4.0)
+  - Braintree/DataCollector (5.4.0):
+    - Braintree/Core
+  - Braintree/PaymentFlow (5.4.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPal (5.4.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPalDataCollector (5.4.0)
+  - Braintree/ThreeDSecure (5.4.0):
+    - Braintree/Card
+    - Braintree/PaymentFlow
+  - Braintree/UnionPay (5.4.0):
+    - Braintree/Card
+  - Braintree/Venmo (5.4.0):
+    - Braintree/Core
+  - BraintreeDropIn (9.0.2):
+    - Braintree/ApplePay (>= 5.3.2, ~> 5.3)
+    - Braintree/Card (>= 5.3.2, ~> 5.3)
+    - Braintree/Core (>= 5.3.2, ~> 5.3)
+    - Braintree/PayPal (>= 5.3.2, ~> 5.3)
+    - Braintree/ThreeDSecure (>= 5.3.2, ~> 5.3)
+    - Braintree/UnionPay (>= 5.3.2, ~> 5.3)
+    - Braintree/Venmo (>= 5.3.2, ~> 5.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - FloatingPanel (1.7.5)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Braintree
+  - Braintree/DataCollector
+  - BraintreeDropIn
+  - Charts
+  - FloatingPanel
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Braintree
+    - BraintreeDropIn
+    - Charts
+    - FloatingPanel
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Braintree: db5c364f520e95f03261ee39446363cae52824f4
+  BraintreeDropIn: 3e666d341e34efb0b5e18221eacd76db469bdab8
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  FloatingPanel: bb17fd6fc7ae519f877f7bd30f4f6115a78acf07
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 59c79c168692c3ad0092fa92d8119970a887fb0d
+
+COCOAPODS: 1.10.1
