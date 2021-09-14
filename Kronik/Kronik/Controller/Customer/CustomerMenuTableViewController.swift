@@ -30,8 +30,12 @@ class CustomerMenuTableViewController: UITableViewController {
     
 
     @IBAction func budMatcherPressed(_ sender: Any) {
-        let alert = Helpers.create1ButtonAlert(alertTitle: "Coming Soon", alertMessage: "The BudMatcher is an upcoming feature on Budmatch that allows you to find the perfect flower or other product nearby. It will only require you to enter information once and the app does the rest of the work forever! This feature will be available in a future update. Stay tuned for more information!", buttonTitle: "Can't Wait!")
-        self.present(alert, animated: true, completion: nil)
+        guard let url = URL(string:  "https://www.budmatchapp.com/budmatcher/") else{
+            return
+        }
+        let vc  = DispensaryWebViewController(url:url, title: "BudMatcher")
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC,animated: true)
     }
     
 
