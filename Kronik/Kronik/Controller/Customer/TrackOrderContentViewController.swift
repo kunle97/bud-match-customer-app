@@ -9,8 +9,24 @@ import UIKit
 import MapKit
 import SwiftyJSON
 class TrackOrderContentViewController: UIViewController {
+   //Progress Bar
+    @IBOutlet weak var progress1: UIProgressView!
+    @IBOutlet weak var progress2: UIProgressView!
+    @IBOutlet weak var progress3: UIProgressView!
+    @IBOutlet weak var progress4: UIProgressView!
+    
+    
+    
     @IBOutlet var myTableView:UITableView!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var deliveryTime: UILabel!
+    
+//    Driver details
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var orderTotal: UILabel!
+    
+    var driverNumber:String!
     
     var driverPin: MKPointAnnotation!
     var destinationPin: MKPointAnnotation!
@@ -36,8 +52,16 @@ class TrackOrderContentViewController: UIViewController {
         getLatestOrder()
 
         // Do any additional setup after loading the view.
+        
     }
     
+    @IBAction func contactDriverPressed(_ sender: Any) {
+        if let url = NSURL(string: "tel://\(driverNumber)"), UIApplication.shared.canOpenURL(url as URL) {
+            UIApplication.shared.openURL(url as URL)
+        }
+    }
+    @IBAction func cancelOrderPressed(_ sender: Any) {
+    }
     
     func showNoActiveOrderView(){
         //If Customer has no active order
@@ -61,12 +85,19 @@ class TrackOrderContentViewController: UIViewController {
         APIManager.shared.getLatestOrder{ [self](json) in
             let order = json["order"]
             let deliveryAddress = order["address"].string!
-            let driverCoords = order["driver"]
+            let orderTotalJSON = order["total"].float!
+            orderTotal.text = "$\(orderTotalJSON)"
             
+            if order["driver"] != JSON.null{//If a driver has picked up your order
+                let driver = order["driver"]
+                driverName.text = driver["name"].string!
+                driverNumber = driver["phone"].string!
+                Helpers.loadImage(driverImage, driver["image"].string!)
+            }
             
             if order["dispensary"]["name"].string! == ""  {
                 self.showNoActiveOrderView()
-            } else if order["status"] != nil || order["status"].string! != "Delivered"{
+            } else if order["status"] != JSON.null || order["status"].string! != "Delivered"{
                 self.showActiveOrderView()
                 
                 if let orderDetails = order["order_details"].array{

@@ -71,7 +71,7 @@ extension MyAccountViewController: UITableViewDelegate, UITableViewDataSource{
 
         }else if indexPath.row == 3{
 
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "new-ui", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "homeScreen")
             self.navigationController!.pushViewController(vc, animated: true)
 

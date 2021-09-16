@@ -2446,20 +2446,20 @@
                                         <rect key="frame" x="20" y="150" width="350" height="70"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-tR-169">
-                                                <rect key="frame" x="8" y="6.5" width="57" height="57"/>
+                                                <rect key="frame" x="8" y="10" width="50" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="57" id="Q8O-AI-jg5"/>
-                                                    <constraint firstAttribute="width" constant="57" id="lsA-ND-dgL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Q8O-AI-jg5"/>
+                                                    <constraint firstAttribute="width" constant="50" id="lsA-ND-dgL"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuF-fe-Ckp">
-                                                <rect key="frame" x="70" y="8" width="109" height="24"/>
+                                                <rect key="frame" x="63" y="15" width="109" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stZ-4e-n3Q">
-                                                <rect key="frame" x="70" y="32" width="90.5" height="17"/>
+                                                <rect key="frame" x="63" y="39" width="90.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2472,6 +2472,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <color key="tintColor" red="0.32156862749999998" green="0.61568627450000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button" image="phone.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="contactDriverPressed:" destination="kHO-HY-tHd" eventType="touchUpInside" id="RO8-ag-WuD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2480,7 +2483,7 @@
                                             <constraint firstItem="Nrb-tR-169" firstAttribute="centerY" secondItem="5DO-ez-Khx" secondAttribute="centerY" id="9gy-Xf-tJR"/>
                                             <constraint firstItem="vuF-fe-Ckp" firstAttribute="leading" secondItem="Nrb-tR-169" secondAttribute="trailing" constant="5" id="KHK-Eq-fQb"/>
                                             <constraint firstAttribute="trailing" secondItem="GYV-W2-y1N" secondAttribute="trailing" constant="8" id="LBl-ei-lwA"/>
-                                            <constraint firstItem="vuF-fe-Ckp" firstAttribute="top" secondItem="5DO-ez-Khx" secondAttribute="top" constant="8" id="MaO-RY-dKk"/>
+                                            <constraint firstItem="vuF-fe-Ckp" firstAttribute="top" secondItem="5DO-ez-Khx" secondAttribute="top" constant="15" id="MaO-RY-dKk"/>
                                             <constraint firstAttribute="height" constant="70" id="PUt-Zx-X9K"/>
                                             <constraint firstItem="Nrb-tR-169" firstAttribute="leading" secondItem="5DO-ez-Khx" secondAttribute="leading" constant="8" id="dVl-ef-OKF"/>
                                             <constraint firstItem="stZ-4e-n3Q" firstAttribute="leading" secondItem="Nrb-tR-169" secondAttribute="trailing" constant="5" id="jah-fl-iLW"/>
@@ -2510,6 +2513,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelOrderPressed:" destination="kHO-HY-tHd" eventType="touchUpInside" id="NYD-FP-HsR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-RC-YKe">
                                         <rect key="frame" x="29" y="228" width="332" height="18"/>
@@ -2663,7 +2669,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deliveryTime" destination="yLM-ic-giU" id="ahw-Jg-tcJ"/>
+                        <outlet property="driverImage" destination="Nrb-tR-169" id="iYP-lY-2sV"/>
+                        <outlet property="driverName" destination="vuF-fe-Ckp" id="QIz-YN-Uc2"/>
                         <outlet property="myTableView" destination="ald-HC-cF1" id="8nd-uy-HsR"/>
+                        <outlet property="orderTotal" destination="RcT-Jg-p8M" id="Ekn-zT-9r2"/>
+                        <outlet property="progress1" destination="bbs-Qr-seh" id="1CK-Rx-UU6"/>
+                        <outlet property="progress2" destination="bjo-hK-UB0" id="Bmi-vf-kfk"/>
+                        <outlet property="progress3" destination="xap-sF-diX" id="Fry-CO-LfF"/>
+                        <outlet property="progress4" destination="FuA-k6-Lig" id="mgo-U0-S5f"/>
                         <outlet property="statusLabel" destination="hsh-jT-8tA" id="JEV-1z-SgR"/>
                     </connections>
                 </viewController>
