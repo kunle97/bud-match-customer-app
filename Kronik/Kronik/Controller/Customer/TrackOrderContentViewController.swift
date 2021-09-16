@@ -63,6 +63,19 @@ class TrackOrderContentViewController: UIViewController {
     @IBAction func cancelOrderPressed(_ sender: Any) {
     }
     
+    func getProgressBar(orderStatus:String){
+        if orderStatus == "Preparing"{
+            progress2.tintColor = UIColor.lightGray
+            progress3.tintColor = UIColor.lightGray
+            progress4.tintColor = UIColor.lightGray
+        }else if orderStatus == "Ready"{
+            progress3.tintColor = UIColor.lightGray
+            progress4.tintColor = UIColor.lightGray
+        }else if orderStatus == "On The Way"{
+            progress4.tintColor = UIColor.lightGray
+        }
+    }
+    
     func showNoActiveOrderView(){
         //If Customer has no active order
 //        self.map.isHidden = true
@@ -101,7 +114,9 @@ class TrackOrderContentViewController: UIViewController {
                 self.showActiveOrderView()
                 
                 if let orderDetails = order["order_details"].array{
-                        self.statusLabel.text = order["status"].string!
+                    let orderStatus = order["status"].string!
+                        self.statusLabel.text = orderStatus
+                        getProgressBar(orderStatus: orderStatus)
                         self.jar = orderDetails
                         self.myTableView.reloadData()
                     

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bud-match-splash-logo-flat" translatesAutoresizingMaskIntoConstraints="NO" id="ggp-yO-7gd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flat-logo-black" translatesAutoresizingMaskIntoConstraints="NO" id="ggp-yO-7gd">
                                 <rect key="frame" x="53.5" y="319" width="307" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="174" id="9hA-jx-3e0"/>
@@ -25,7 +25,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.32156862749999998" green="0.61568627450000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ggp-yO-7gd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cwg-R9-ZfJ"/>
                             <constraint firstItem="ggp-yO-7gd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-42" id="wJn-OU-Z7Y"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bud-match-splash-logo-flat" width="898" height="151"/>
+        <image name="flat-logo-black" width="883" height="123"/>
     </resources>
 </document>
