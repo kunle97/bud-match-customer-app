@@ -22,25 +22,31 @@ class StrainListTableViewController: UITableViewController {
         }
         dispensaryURL = dispensary?.url
         loadStrains()
+        print("STRAINS GOD DAMMIT d\(strains)")
     }
     
-    func loadStrains(){
+    func loadStrains() -> [Any] {
+        self.strains = []
+       
         Helpers.showActivityIndicator(activityIndicator,self.view)
         if let dispensaryId = dispensary?.id{
-            APIManager.shared.getStrains(dispensaryId: dispensaryId) { (json) in
+        APIManager.shared.getStrains(dispensaryId: dispensaryId) { (json) in
                 if json != nil{
-                    self.strains = []
+                    
                     if let tempStrains = json["strains"].array{
                         for item in tempStrains{
                             let strain = Strain(json: item)
                             self.strains.append(strain)
+                            
                             self.tableView.reloadData()
                             Helpers.hideActivityIndicator(self.activityIndicator)
                         }
                     }
                 }
             }
+        
         }
+        return [Any].init()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,6 +82,7 @@ class StrainListTableViewController: UITableViewController {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: "StrainCell", for: indexPath) as! StrainViewCell
         let strain = strains[indexPath.row]
+        
         cell.strainNameLabel.text = strain.name
         cell.shortDescriptionlabel.text = strain.short_description
         

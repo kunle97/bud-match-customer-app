@@ -20,7 +20,7 @@ class ProductsCollection: UICollectionView,UICollectionViewDelegate,UICollection
         let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: 220, height: 220)
         self.collectionViewLayout = layout
-       
+       loadStrains()
     }
     
     

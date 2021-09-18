@@ -77,6 +77,7 @@
 		79A99E6E266032D300D623C5 /* StrainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E6D266032D300D623C5 /* StrainListTableViewController.swift */; };
 		79ADF1A226923E19006AA887 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADF1A126923E19006AA887 /* MyAccountViewController.swift */; };
 		79AF7443269544CC00298CA4 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF7442269544CC00298CA4 /* PersonalInfoViewController.swift */; };
+		79D3C06726F5CF5200CEF755 /* DispensaryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */; };
 		79E03862269689CA0075D84F /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E03861269689CA0075D84F /* AddressTableViewCell.swift */; };
 		79E0386426968BE70075D84F /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0386326968BE70075D84F /* AddressTableViewController.swift */; };
 		79E03866269897B10075D84F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E03865269897B10075D84F /* Address.swift */; };
@@ -166,6 +167,7 @@
 		79A99E6D266032D300D623C5 /* StrainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainListTableViewController.swift; sourceTree = "<group>"; };
 		79ADF1A126923E19006AA887 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		79AF7442269544CC00298CA4 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryMapView.swift; sourceTree = "<group>"; };
 		79E03861269689CA0075D84F /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		79E0386326968BE70075D84F /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
 		79E03865269897B10075D84F /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		794B6965265EB97100C4067F /* Kronik */ = {
 			isa = PBXGroup;
 			children = (
+				7954AEF526F176050059C0EE /* HomeView.swift */,
 				7954AEEF26F170DA0059C0EE /* FeatureCell.swift */,
 				7954AEEB26F1706A0059C0EE /* HomeTable.swift */,
 				7954AEF126F171100059C0EE /* CategoryCell.swift */,
@@ -297,7 +300,6 @@
 				794B6968265EB97100C4067F /* SceneDelegate.swift */,
 				794B696F265EB97300C4067F /* Assets.xcassets */,
 				794B6974265EB97300C4067F /* Info.plist */,
-				7954AEF526F176050059C0EE /* HomeView.swift */,
 			);
 			path = Kronik;
 			sourceTree = "<group>";
@@ -337,6 +339,7 @@
 				798ECA8D26C8ADBC0090F3C4 /* DispensaryWebViewController.swift */,
 				7980F42F26D84B760022B59F /* DispensaryCategoryViewController.swift */,
 				79E5E76D26E29443004314AF /* TrackOrderContentViewController.swift */,
+				79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				7980F43026D84B760022B59F /* DispensaryCategoryViewController.swift in Sources */,
 				7931C975266AABDC00A50BE0 /* Dispensary.swift in Sources */,
 				7954AEFA26F1802D0059C0EE /* Edible.swift in Sources */,
+				79D3C06726F5CF5200CEF755 /* DispensaryMapView.swift in Sources */,
 				79E0386A269A61330075D84F /* EditAddressViewController.swift in Sources */,
 				79E5E76E26E29443004314AF /* TrackOrderContentViewController.swift in Sources */,
 				797A5ADF26B472F600EA7FDE /* TempStrain.swift in Sources */,

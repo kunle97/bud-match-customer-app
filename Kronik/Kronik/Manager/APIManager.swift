@@ -84,9 +84,11 @@ class APIManager {
 }
     
     //Function that handles requests from a server
-    func requestServer(_ method: Alamofire.HTTPMethod, _ path:String, _ params: [String: Any],_ encoding: ParameterEncoding, _ completionHandler: @escaping(JSON) -> Void){
+    func requestServer(_ method: Alamofire.HTTPMethod, _ path:String, _ params: [String: Any],_ encoding: ParameterEncoding, _ completionHandler: @escaping(JSON) -> Void)  {
         let url = baseURL!.appendingPathComponent(path)
-        
+//        var responseData:Any = []
+//        let data  =  Data(base64Encoded: "")!
+//        var responseDataJSON:JSON = JSON(data: data)
 //        refreshTokenIfNeed {
             
         AF.request(url!, method: method, parameters: params, encoding: encoding, headers: nil).responseJSON(completionHandler: { (response) in
@@ -94,6 +96,8 @@ class APIManager {
                 switch response.result {
                 case .success(let value):
                     let jsonData = JSON(value)
+//                    responseData = jsonData.arrayValue
+//                    responseDataJSON = jsonData
                     completionHandler(jsonData)
 //                    print(jsonData)
                     break
@@ -105,7 +109,7 @@ class APIManager {
                 }
             })
         //}
-        
+//        return responseData as! [Any]
     }
     
     // API - Getting DISPENSARary list
@@ -117,59 +121,33 @@ class APIManager {
     }
     
     //API Get all Strains for specific dispensary
-    func getStrains(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
+    func getStrains(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void) {
         let path = "api/customer/strains/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
+        let data = requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+
     }
     
-    
-    //API Get all Edible for specific dispensary
-    func getEdibles(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/edibles/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
+    func getProducts(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void) {
+        let path = "api/customer/products/\(dispensaryId)"
+        let data = requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+
     }
     
-    
-    //API Get all Edible for specific dispensary
-    func getVapes(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/vapes/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
+    func getProductsByType(dispensaryId: Int, type:String,completionHandler: @escaping(JSON) -> Void) {
+        let path = "api/customer/products/\(type)/\(dispensaryId)/"
+        let data = requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+
     }
     
-    
-    //API Get all Extracts for specific dispensary
-    func getExtracts(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/extracts/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+    func getFlowers(dispensaryId: Int) -> [Strain] {
+        let path = "http://budmatchapp.com/api/customer/strains/\(dispensaryId)"
         
+        var strainsArr = [Strain]()
+        
+        
+        return strainsArr
     }
     
-    
-    //API Get all Prerolls for specific dispensary
-    func getPrerolls(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/prerolls/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
-    }
-    
-    
-    //API Get all Edible for specific dispensary
-    func getAccessories(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/accessories/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
-    }
-    
-    
-    //API Get all Edible for specific dispensary
-    func getWellness(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void){
-        let path = "api/customer/wellness/\(dispensaryId)"
-        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
-        
-    }
     
 
     //MARK: - CUSTOMER FUNCTIONS

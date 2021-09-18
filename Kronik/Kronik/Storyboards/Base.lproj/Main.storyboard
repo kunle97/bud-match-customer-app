@@ -1293,6 +1293,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="W0B-LC-KNX">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu-icon-48" id="q8f-Ve-zYr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" catalog="system" id="Y4q-xz-67r">
+                            <connections>
+                                <segue destination="BrY-uX-Dxv" kind="show" id="5jc-CT-KLF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dispensariesTableView" destination="NbP-Ec-KAv" id="EUr-xu-Gur"/>
@@ -2685,6 +2690,36 @@
             </objects>
             <point key="canvasLocation" x="6015.9420289855079" y="2278.7946428571427"/>
         </scene>
+        <!--Dispensary Map View-->
+        <scene sceneID="kh9-Dx-EMJ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BrY-uX-Dxv" customClass="DispensaryMapView" customModule="Kronik" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXp-Ox-fJd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HgZ-OD-UTs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8yV-ag-BrT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HgZ-OD-UTs" firstAttribute="top" secondItem="IXp-Ox-fJd" secondAttribute="top" id="BtG-Pd-e93"/>
+                            <constraint firstItem="HgZ-OD-UTs" firstAttribute="leading" secondItem="8yV-ag-BrT" secondAttribute="leading" id="CtR-9L-Cpm"/>
+                            <constraint firstItem="8yV-ag-BrT" firstAttribute="bottom" secondItem="HgZ-OD-UTs" secondAttribute="bottom" id="XVp-BR-xJ6"/>
+                            <constraint firstItem="8yV-ag-BrT" firstAttribute="trailing" secondItem="HgZ-OD-UTs" secondAttribute="trailing" id="lel-7o-75s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SBZ-2J-xdJ"/>
+                    <connections>
+                        <outlet property="map" destination="HgZ-OD-UTs" id="Xgr-L3-u8q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuV-Ay-V1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="2279"/>
+        </scene>
         <!--Strain Details View Controller-->
         <scene sceneID="D9J-eP-TBC">
             <objects>
@@ -3212,6 +3247,7 @@
         <image name="jar-icon-white" width="75" height="75"/>
         <image name="leaf1-green-ui" width="423" height="450"/>
         <image name="leaf1-white" width="423" height="450"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="menu-icon-48" width="48" height="48"/>
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="personal-info-icon" width="512" height="512"/>
