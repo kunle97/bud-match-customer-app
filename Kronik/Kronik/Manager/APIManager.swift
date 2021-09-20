@@ -123,13 +123,13 @@ class APIManager {
     //API Get all Strains for specific dispensary
     func getStrains(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void) {
         let path = "api/customer/strains/\(dispensaryId)"
-        let data = requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
 
     }
     
     func getProducts(dispensaryId: Int, completionHandler: @escaping(JSON) -> Void) {
         let path = "api/customer/products/\(dispensaryId)"
-        let data = requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
+        requestServer(.get, path, ["":""], URLEncoding(),  completionHandler)
 
     }
     
@@ -206,53 +206,7 @@ class APIManager {
         
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
-    
-    //API Create new order
-    func createOrder(stripeToken: String, completionHandler: @escaping(JSON) -> Void ){
-        let path = "api/customer/order/add/"
-        let url = baseURL!.appendingPathComponent(path)
-        let simpleArray = Jar.currentJar.items
-        let jsonArray = simpleArray.map { item in
-            return [
-                "strain_id": item.strain.id,
-                "quantity": item.qty,
-            ]
-        }
-        if JSONSerialization.isValidJSONObject(jsonArray){
-            do{
-                let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
-                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
-                accessToken = User.currentUser.accessToken
-                let params:[String: Any] = [
-                    "access_token":accessToken,
-                    "stripe_token":stripeToken,
-                    "dispensary_id": "\(Jar.currentJar.dispensary!.id!)",
-                    "order_details": dataString,
-                    "address":Jar.currentJar.address!
-                ]
-//                print("Params: \(params)")
-//                requestServer(.post, path, params , URLEncoding(), completionHandler)
-                AF.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
-                        
-                        switch response.result {
-                        case .success(let value):
-                            let jsonData = JSON(value)
-                            completionHandler(jsonData)
-                            print(jsonData)
-                            break
-                            
-                        case .failure:
-                            completionHandler(["error comp"])
-                            print(response)
-                            break
-                        }
-                    })
-            }catch{
-                print("JSON Serialiation Failed on some bullshit: \(error)")
-            }
-        }
-        
-    }
+
     
     //API- Get latest Order
     func getLatestOrder(completionHandler: @escaping (JSON) -> Void ){
@@ -283,7 +237,7 @@ class APIManager {
         let simpleArray = Jar.currentJar.items
         let jsonArray = simpleArray.map { item in
             return [
-                "strain_id": item.strain.id,
+                "product_id": item.product.id,
                 "quantity": item.qty,
             ]
         }

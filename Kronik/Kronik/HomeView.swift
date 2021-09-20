@@ -26,12 +26,7 @@ class HomeView: UIViewController {
     ]
     
     var strains = [Strain]()
-    var accesoroes = [Accessory]()
-    var vapes = [Vape]()
-    var edible = [Edible]()
-    var extracts = [Extract]()
-    var wellness = [Wellness]()
-    var prerolls = [Preroll]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

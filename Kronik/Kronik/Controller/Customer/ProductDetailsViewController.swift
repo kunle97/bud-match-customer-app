@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StrainDetailsViewController: UIViewController {
+class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var strainImg: UIImageView!
     @IBOutlet weak var strainNameLabel: UILabel!
     @IBOutlet weak var strainDescriptionLabel: UILabel!
@@ -19,57 +19,33 @@ class StrainDetailsViewController: UIViewController {
 
 
     
-    var strain: Strain?
+    var product: Product?
     var dispensary: Dispensary?
     var qty = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        navigationController?.navigationBar.isHidden = true
-        loadStrain()
+        loadProduct()
         // Do any additional setup after loading the view.
     }
     
-    func loadStrain(){
+    func loadProduct(){
         
-        if let price = strain?.price{
+        if let price = product?.price{
 //            addToJarButton.setTitle("Add To Jar - $\(price)", for: .normal)
             staticPriceLabel.text = "$\(price)"
             dynamicPriceLabel.text = "$\(price)"
         }
         
-        strainNameLabel.text = strain?.name
-        strainDescriptionLabel.text = strain?.short_description
+        strainNameLabel.text = product?.name
+        strainDescriptionLabel.text = product?.description
         
         
-        switch strain?.price_type {
-        case 1://Quarter
-            if let price = strain?.price{
-                priceTypeLabel.text = "per 1/4 Oz"
-            }
-            break
-        case 2:// Half
-            if let price = strain?.price{
-                priceTypeLabel.text = "per 1/2 Oz"
-            }
-            break
-        case 3://Eighth
-            if let price = strain?.price{
-                priceTypeLabel.text = "per 1/8 Oz"
-            }
-            break
-        case 4://Gram
-            if let price = strain?.price{
-                priceTypeLabel.text = "per 1g"
-            }
-            break
-        default:
-            print("")
-        }
         
 
         
-        if let imgURL = strain?.image{
+        if let imgURL = product?.image{
             Helpers.loadImage(strainImg, "\(imgURL)")
         }
     }
@@ -78,7 +54,7 @@ class StrainDetailsViewController: UIViewController {
         if qty < 99{
             qty += 1
             quantityLabel.text = String(qty)
-            if let price = strain?.price{
+            if let price = product?.price{
                 dynamicPriceLabel.text = "$\(price*Float(qty))"
 //                addToJarButton.setTitle("Add To Jar - $\(price*Float(qty))", for: .normal)
             }
@@ -89,7 +65,7 @@ class StrainDetailsViewController: UIViewController {
         if qty >= 2{
             qty -= 1
             quantityLabel.text = String(qty)
-            if let price = strain?.price{
+            if let price = product?.price{
 //                addToJarButton.setTitle("Add To Jar - $\(price*Float(qty))", for: .normal)
                 dynamicPriceLabel.text = "$\(price*Float(qty))"
             }
@@ -107,7 +83,7 @@ class StrainDetailsViewController: UIViewController {
                        options: UIView.AnimationOptions.curveEaseOut,
                        animations: {image.center = CGPoint(x: self.view.frame.width-40, y:  24)},
                        completion: { _ in image.removeFromSuperview()})
-        let jarItem = JarItem(strain: strain!, qty: self.qty)
+        let jarItem = JarItem(product: product!, qty: self.qty)
         guard let jarDispensary = Jar.currentJar.dispensary, let currentDispensary =  self.dispensary else{
             Jar.currentJar.dispensary = self.dispensary
             Jar.currentJar.items.append(jarItem)
@@ -118,7 +94,7 @@ class StrainDetailsViewController: UIViewController {
         //Check if user ordered strain from the same dispensary
         if jarDispensary.id == currentDispensary.id{
             let inJar = Jar.currentJar.items.firstIndex(where:{ (item) -> Bool in
-                return  item.strain.id! == jarItem.strain.id
+                return  item.product.id! == jarItem.product.id
             })
              
             if let index = inJar{

@@ -9,11 +9,11 @@ import Foundation
 
 //Object for a cart item
 class JarItem: Codable{
-    var strain: Strain
+    var product: Product
     var qty: Int
     
-    init(strain: Strain, qty: Int){
-        self.strain = strain
+    init(product: Product, qty: Int){
+        self.product = product
         self.qty = qty
         
     }
@@ -30,7 +30,7 @@ class Jar:Codable {
     func getTotal() -> Float{
         var total: Float = 0
         for item in self.items{
-            total = total + Float(item.qty) * item.strain.price!
+            total = total + Float(item.qty) * item.product.price!
          }
         return total
     }

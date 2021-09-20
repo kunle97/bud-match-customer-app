@@ -13,6 +13,7 @@ class Dispensary: Codable{
     var name: String?
     var address: String?
     var logo: String?
+    var backdrop:String?
     var url: String?
     
     init(json: JSON) {
@@ -20,6 +21,7 @@ class Dispensary: Codable{
         self.name = json["name"].string
         self.address = json["address"].string
         self.logo = json["logo"].string
+        self.backdrop = json["backdrop"].string
         self.url = json["url"].string
     }
 }

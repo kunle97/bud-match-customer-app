@@ -235,9 +235,9 @@ extension JarViewController: UITableViewDataSource, UITableViewDelegate{
         
         let jar  = Jar.currentJar.items[indexPath.row]
         cell.qtyLabel.text = "\(jar.qty)"
-        cell.strainNameLabel.text = jar.strain.name
-        cell.strainSubtotalLabel.text = "$\(jar.strain.price!)"
-        Helpers.loadImage(cell.jarItemImage, jar.strain.image!)
+        cell.strainNameLabel.text = jar.product.name
+        cell.strainSubtotalLabel.text = "$\(jar.product.price!)"
+        Helpers.loadImage(cell.jarItemImage, jar.product.image!)
         
         return cell
     }

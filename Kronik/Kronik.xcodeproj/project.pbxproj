@@ -11,7 +11,6 @@
 		790794F426636426004338EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790794F326636426004338EA /* User.swift */; };
 		790794FA26636CE4004338EA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790794F926636CE4004338EA /* APIManager.swift */; };
 		790794FE26636ED9004338EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790794FD26636ED9004338EA /* Constants.swift */; };
-		79094256269F16EF009F8749 /* Driver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79094255269F16EF009F8749 /* Driver.storyboard */; };
 		7931C975266AABDC00A50BE0 /* Dispensary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931C974266AABDC00A50BE0 /* Dispensary.swift */; };
 		7934397B268900C9000E895C /* DriverSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7934397A268900C9000E895C /* DriverSignUpViewController.swift */; };
 		793F800E266174D600B11563 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F800D266174D600B11563 /* PaymentViewController.swift */; };
@@ -28,12 +27,6 @@
 		7954AEF226F171100059C0EE /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEF126F171100059C0EE /* CategoryCell.swift */; };
 		7954AEF426F171310059C0EE /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEF326F171310059C0EE /* ProductCell.swift */; };
 		7954AEF626F176050059C0EE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEF526F176050059C0EE /* HomeView.swift */; };
-		7954AEF826F17FFC0059C0EE /* Vape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEF726F17FFC0059C0EE /* Vape.swift */; };
-		7954AEFA26F1802D0059C0EE /* Edible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEF926F1802D0059C0EE /* Edible.swift */; };
-		7954AEFC26F1803D0059C0EE /* Extract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEFB26F1803C0059C0EE /* Extract.swift */; };
-		7954AEFE26F1805E0059C0EE /* Wellness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEFD26F1805E0059C0EE /* Wellness.swift */; };
-		7954AF0026F1806F0059C0EE /* Preroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AEFF26F1806F0059C0EE /* Preroll.swift */; };
-		7954AF0226F180850059C0EE /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954AF0126F180850059C0EE /* Accessory.swift */; };
 		79682F5426C264C400DCB04F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79682F5326C264C400DCB04F /* ChangePasswordViewController.swift */; };
 		79712939267A5F9B003BEF6F /* CustomerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79712938267A5F9B003BEF6F /* CustomerSignUpViewController.swift */; };
 		7972444D266EC8B200DFC975 /* DispensaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972444C266EC8B200DFC975 /* DispensaryViewCell.swift */; };
@@ -64,9 +57,8 @@
 		797A5AF126B487E000EA7FDE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A5AF026B487E000EA7FDE /* SearchViewController.swift */; };
 		797A5AF426B4884700EA7FDE /* ResultsSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A5AF326B4884700EA7FDE /* ResultsSlider.swift */; };
 		7980F42E26D84AC20022B59F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980F42D26D84AC20022B59F /* CategoryCollectionViewCell.swift */; };
-		7980F43026D84B760022B59F /* DispensaryCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980F42F26D84B760022B59F /* DispensaryCategoryViewController.swift */; };
 		798ECA8E26C8ADBD0090F3C4 /* DispensaryWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798ECA8D26C8ADBC0090F3C4 /* DispensaryWebViewController.swift */; };
-		798F347426615FB400AEBF72 /* StrainDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F347326615FB300AEBF72 /* StrainDetailsViewController.swift */; };
+		798F347426615FB400AEBF72 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F347326615FB300AEBF72 /* ProductDetailsViewController.swift */; };
 		798F34762661677900AEBF72 /* JarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F34752661677900AEBF72 /* JarViewController.swift */; };
 		798F34792661688E00AEBF72 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F34782661688E00AEBF72 /* MapKit.framework */; };
 		798F47A226C0A450006B8320 /* MyAccountTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F47A126C0A450006B8320 /* MyAccountTableTableViewCell.swift */; };
@@ -74,7 +66,7 @@
 		79A99E6626600F1100D623C5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E6426600F1100D623C5 /* SWRevealViewController.m */; };
 		79A99E6A2660234200D623C5 /* DispensaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E692660234200D623C5 /* DispensaryViewController.swift */; };
 		79A99E6C2660296D00D623C5 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E6B2660296D00D623C5 /* CustomerMenuTableViewController.swift */; };
-		79A99E6E266032D300D623C5 /* StrainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E6D266032D300D623C5 /* StrainListTableViewController.swift */; };
+		79A99E6E266032D300D623C5 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A99E6D266032D300D623C5 /* ProductListTableViewController.swift */; };
 		79ADF1A226923E19006AA887 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADF1A126923E19006AA887 /* MyAccountViewController.swift */; };
 		79AF7443269544CC00298CA4 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF7442269544CC00298CA4 /* PersonalInfoViewController.swift */; };
 		79D3C06726F5CF5200CEF755 /* DispensaryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */; };
@@ -96,7 +88,6 @@
 		790794F326636426004338EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		790794F926636CE4004338EA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		790794FD26636ED9004338EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		79094255269F16EF009F8749 /* Driver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Driver.storyboard; sourceTree = "<group>"; };
 		7931C974266AABDC00A50BE0 /* Dispensary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispensary.swift; sourceTree = "<group>"; };
 		7934397A268900C9000E895C /* DriverSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSignUpViewController.swift; sourceTree = "<group>"; };
 		793F800D266174D600B11563 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -116,12 +107,6 @@
 		7954AEF126F171100059C0EE /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		7954AEF326F171310059C0EE /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		7954AEF526F176050059C0EE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		7954AEF726F17FFC0059C0EE /* Vape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vape.swift; sourceTree = "<group>"; };
-		7954AEF926F1802D0059C0EE /* Edible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edible.swift; sourceTree = "<group>"; };
-		7954AEFB26F1803C0059C0EE /* Extract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extract.swift; sourceTree = "<group>"; };
-		7954AEFD26F1805E0059C0EE /* Wellness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wellness.swift; sourceTree = "<group>"; };
-		7954AEFF26F1806F0059C0EE /* Preroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preroll.swift; sourceTree = "<group>"; };
-		7954AF0126F180850059C0EE /* Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
 		79682F5326C264C400DCB04F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		79712938267A5F9B003BEF6F /* CustomerSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSignUpViewController.swift; sourceTree = "<group>"; };
 		7972444C266EC8B200DFC975 /* DispensaryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryViewCell.swift; sourceTree = "<group>"; };
@@ -152,9 +137,8 @@
 		797A5AF026B487E000EA7FDE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		797A5AF326B4884700EA7FDE /* ResultsSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSlider.swift; sourceTree = "<group>"; };
 		7980F42D26D84AC20022B59F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		7980F42F26D84B760022B59F /* DispensaryCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryCategoryViewController.swift; sourceTree = "<group>"; };
 		798ECA8D26C8ADBC0090F3C4 /* DispensaryWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryWebViewController.swift; sourceTree = "<group>"; };
-		798F347326615FB300AEBF72 /* StrainDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainDetailsViewController.swift; sourceTree = "<group>"; };
+		798F347326615FB300AEBF72 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		798F34752661677900AEBF72 /* JarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarViewController.swift; sourceTree = "<group>"; };
 		798F34782661688E00AEBF72 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		798F47A126C0A450006B8320 /* MyAccountTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,7 +148,7 @@
 		79A99E6526600F1100D623C5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		79A99E692660234200D623C5 /* DispensaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryViewController.swift; sourceTree = "<group>"; };
 		79A99E6B2660296D00D623C5 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
-		79A99E6D266032D300D623C5 /* StrainListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainListTableViewController.swift; sourceTree = "<group>"; };
+		79A99E6D266032D300D623C5 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
 		79ADF1A126923E19006AA887 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		79AF7442269544CC00298CA4 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryMapView.swift; sourceTree = "<group>"; };
@@ -253,7 +237,6 @@
 			children = (
 				794B696C265EB97100C4067F /* Main.storyboard */,
 				794B6971265EB97300C4067F /* LaunchScreen.storyboard */,
-				79094255269F16EF009F8749 /* Driver.storyboard */,
 				79F1017026AF7C2A0090F96C /* new-ui.storyboard */,
 			);
 			path = Storyboards;
@@ -323,8 +306,8 @@
 				793F80142662C8F500B11563 /* LoginViewController.swift */,
 				79A99E692660234200D623C5 /* DispensaryViewController.swift */,
 				79A99E6B2660296D00D623C5 /* CustomerMenuTableViewController.swift */,
-				79A99E6D266032D300D623C5 /* StrainListTableViewController.swift */,
-				798F347326615FB300AEBF72 /* StrainDetailsViewController.swift */,
+				79A99E6D266032D300D623C5 /* ProductListTableViewController.swift */,
+				798F347326615FB300AEBF72 /* ProductDetailsViewController.swift */,
 				798F34752661677900AEBF72 /* JarViewController.swift */,
 				793F800D266174D600B11563 /* PaymentViewController.swift */,
 				793F800F2661A0E000B11563 /* TrackOrderViewController.swift */,
@@ -337,7 +320,6 @@
 				79FDE7DB269EE99A00839809 /* JarAddressTableViewController.swift */,
 				79682F5326C264C400DCB04F /* ChangePasswordViewController.swift */,
 				798ECA8D26C8ADBC0090F3C4 /* DispensaryWebViewController.swift */,
-				7980F42F26D84B760022B59F /* DispensaryCategoryViewController.swift */,
 				79E5E76D26E29443004314AF /* TrackOrderContentViewController.swift */,
 				79D3C06626F5CF5200CEF755 /* DispensaryMapView.swift */,
 			);
@@ -361,12 +343,6 @@
 				79724450266FCB6C00DFC975 /* Product.swift */,
 				7972445626705EC000DFC975 /* JarItem.swift */,
 				79E03865269897B10075D84F /* Address.swift */,
-				7954AEF726F17FFC0059C0EE /* Vape.swift */,
-				7954AEF926F1802D0059C0EE /* Edible.swift */,
-				7954AEFB26F1803C0059C0EE /* Extract.swift */,
-				7954AEFD26F1805E0059C0EE /* Wellness.swift */,
-				7954AEFF26F1806F0059C0EE /* Preroll.swift */,
-				7954AF0126F180850059C0EE /* Accessory.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -525,7 +501,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79094256269F16EF009F8749 /* Driver.storyboard in Resources */,
 				794B6973265EB97300C4067F /* LaunchScreen.storyboard in Resources */,
 				79F1017126AF7C2A0090F96C /* new-ui.storyboard in Resources */,
 				794B6970265EB97300C4067F /* Assets.xcassets in Resources */,
@@ -596,18 +571,15 @@
 				797A5AE726B473EB00EA7FDE /* DispensarySlider.swift in Sources */,
 				7934397B268900C9000E895C /* DriverSignUpViewController.swift in Sources */,
 				79FDE7DC269EE99A00839809 /* JarAddressTableViewController.swift in Sources */,
-				7954AEF826F17FFC0059C0EE /* Vape.swift in Sources */,
 				79A99E6A2660234200D623C5 /* DispensaryViewController.swift in Sources */,
 				794B6967265EB97100C4067F /* AppDelegate.swift in Sources */,
 				797619022675075B00909343 /* DriverOrdersViewController.swift in Sources */,
-				7954AEFC26F1803D0059C0EE /* Extract.swift in Sources */,
-				79A99E6E266032D300D623C5 /* StrainListTableViewController.swift in Sources */,
+				79A99E6E266032D300D623C5 /* ProductListTableViewController.swift in Sources */,
 				79F1020426B3A3BD0090F96C /* StrainManager.swift in Sources */,
 				790794FE26636ED9004338EA /* Constants.swift in Sources */,
 				7976190426752E8000909343 /* DeliveryViewController.swift in Sources */,
 				7954AEEE26F1709A0059C0EE /* ProductsCollection.swift in Sources */,
 				79E03866269897B10075D84F /* Address.swift in Sources */,
-				7954AF0026F1806F0059C0EE /* Preroll.swift in Sources */,
 				797A5AED26B4757900EA7FDE /* HomeViewController.swift in Sources */,
 				79724453266FCED700DFC975 /* StrainViewCell.swift in Sources */,
 				797A5AE326B4733E00EA7FDE /* DispensaryList.swift in Sources */,
@@ -628,7 +600,7 @@
 				7980F42E26D84AC20022B59F /* CategoryCollectionViewCell.swift in Sources */,
 				7972444F266FCB2A00DFC975 /* Strain.swift in Sources */,
 				797A5AF426B4884700EA7FDE /* ResultsSlider.swift in Sources */,
-				798F347426615FB400AEBF72 /* StrainDetailsViewController.swift in Sources */,
+				798F347426615FB400AEBF72 /* ProductDetailsViewController.swift in Sources */,
 				797A5AEF26B47D4500EA7FDE /* TabBarViewController.swift in Sources */,
 				79F1020226B3A1DA0090F96C /* K.swift in Sources */,
 				79731E4B267540EC002F2D13 /* DriverOrderCell.swift in Sources */,
@@ -639,9 +611,7 @@
 				798F47A226C0A450006B8320 /* MyAccountTableTableViewCell.swift in Sources */,
 				797A5AE526B4739400EA7FDE /* FilterSlider.swift in Sources */,
 				793F80102661A0E000B11563 /* TrackOrderViewController.swift in Sources */,
-				7980F43026D84B760022B59F /* DispensaryCategoryViewController.swift in Sources */,
 				7931C975266AABDC00A50BE0 /* Dispensary.swift in Sources */,
-				7954AEFA26F1802D0059C0EE /* Edible.swift in Sources */,
 				79D3C06726F5CF5200CEF755 /* DispensaryMapView.swift in Sources */,
 				79E0386A269A61330075D84F /* EditAddressViewController.swift in Sources */,
 				79E5E76E26E29443004314AF /* TrackOrderContentViewController.swift in Sources */,
@@ -653,10 +623,8 @@
 				79ADF1A226923E19006AA887 /* MyAccountViewController.swift in Sources */,
 				79A99E6626600F1100D623C5 /* SWRevealViewController.m in Sources */,
 				798F47A426C0FE64006B8320 /* CompositionalLayoutTestViewController.swift in Sources */,
-				7954AEFE26F1805E0059C0EE /* Wellness.swift in Sources */,
 				79E5E77026E299EB004314AF /* TrackOrderDetailsTableViewCell.swift in Sources */,
 				7954AEF226F171100059C0EE /* CategoryCell.swift in Sources */,
-				7954AF0226F180850059C0EE /* Accessory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

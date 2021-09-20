@@ -22,14 +22,10 @@ class HomeTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         "Wellness"
     ]
     
-    var products = [String:[Any]]()
+//    var products = [String:[Any]]()
     var strains = [Strain]()
-    var accesoroes = [Accessory]()
-    var vapes = [Vape]()
-    var edible = [Edible]()
-    var extracts = [Extract]()
-    var wellness = [Wellness]()
-    var prerolls = [Preroll]()
+    var products = [Product]()
+
     override func awakeFromNib() {
         self.delegate = self
         self.dataSource = self
@@ -70,7 +66,6 @@ class HomeTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         
         
 //        }
-        products["Flowers"] = strains
         
         
     }

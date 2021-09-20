@@ -58,7 +58,7 @@ class DispensaryViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StrainList"{
-            let controller = segue.destination as! StrainListTableViewController
+            let controller = segue.destination as! ProductListTableViewController
             controller.dispensary = dispensaries[(dispensariesTableView.indexPathForSelectedRow?.row)!]
         }
     }
@@ -99,7 +99,7 @@ extension DispensaryViewController: UITableViewDelegate, UITableViewDataSource{
         cell.dispensaryNameLabel.text = dispensary.name!
         cell.dispensaryAddressLabel.text = dispensary.address!
         
-        if let logoName = dispensary.logo{
+        if let logoName = dispensary.backdrop{
             let url = "\(logoName)"
             Helpers.loadImage(cell.dispensaryCoverImage, url)
         }
