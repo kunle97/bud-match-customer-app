@@ -12,7 +12,7 @@ class ProductsCollection: UICollectionView,UICollectionViewDelegate,UICollection
     //2. Store in array "categories"
     //3.
     var products = [Strain]()
-    
+    var categoryName:String?
     let activityIndicator = UIActivityIndicatorView()
     override func awakeFromNib() {
         self.delegate = self
